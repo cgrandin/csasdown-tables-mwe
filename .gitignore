@@ -1,0 +1,7 @@
+.Rproj.user
+*.html
+_bookdown_files
+knitr-cache
+knitr-figs
+*.pdf
+_book

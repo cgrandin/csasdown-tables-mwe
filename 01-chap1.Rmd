@@ -1,0 +1,28 @@
+
+```{r}
+library(dplyr)
+library(gfplot)
+# library(kableExtra)
+```
+
+```{r load_data2}
+flights <- read.csv("data/flights.csv")
+```
+
+```{r max_delays2}
+library(dplyr)
+flights2 <- flights %>% 
+  select(carrier_name, arr_delay)
+max_delays <- flights2 %>% 
+  group_by(carrier_name) %>%
+  summarize(max_arr_delay = max(arr_delay, na.rm = TRUE))
+```
+
+```{r maxdelays2, results="asis"}
+library(knitr)
+kable(max_delays, 
+      col.names = c("Airline", "Max Arrival Delay"),
+      caption = "Maximum Delays by Airline",
+      longtable = TRUE,
+      booktabs = TRUE)
+```

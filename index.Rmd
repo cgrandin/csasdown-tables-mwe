@@ -1,0 +1,29 @@
+---
+title: "Title Here (*Latin Species Name*)"
+author: |
+  First. M. Last^1^ and
+  Alex B. Smith^2^
+author_list: "Last, F.M. and Smith, A.B."
+address: |
+  ^1^Pacific Biological Station\
+     Fisheries and Oceans Canada, 3190 Hammond Bay Road\
+     Nanaimo, British Columbia, V9T 6N7, Canada\
+  ^2^Far, far away\
+     Another Galaxy
+year: "2018"
+report_number: "nnn"
+abstract: |
+  Here is the abstract text.
+always_allow_html: yes
+output:
+  csasdown::resdoc_word
+# ------------
+# End of options to set
+knit: bookdown::render_book
+site: bookdown::bookdown_site
+link-citations: true
+bibliography: bib/refs.bib
+csl: csl/csas.csl
+lot: true
+lof: true
+---
