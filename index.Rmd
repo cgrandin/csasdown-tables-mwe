@@ -13,10 +13,11 @@ address: |
 year: "2018"
 report_number: "nnn"
 abstract: |
-  Here is the abstract text.
+  This sentence has exactly 72 characters. Any more than that will breakit
 always_allow_html: yes
 output:
-  csasdown::resdoc_word
+  csasdown::resdoc_pdf
+  #csasdown::resdoc_word
 # ------------
 # End of options to set
 knit: bookdown::render_book
